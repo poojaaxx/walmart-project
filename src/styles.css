@@ -1,0 +1,157 @@
+/* Base reset and font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* App container styled like a mobile card */
+.app {
+  background: #ffffffee;
+  width: 100%;
+  max-width: 480px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #003366;
+  margin-top: 0;
+}
+
+/* Cart items */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+li {
+  background: #eef7ff;
+  border: 1px solid #cce5ff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.predicted {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.adjusted {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.on-sale {
+  background: #d4edda;
+  color: #155724;
+}
+
+.custom {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Chat container */
+.chatbox {
+  margin-top: 25px;
+  border: 2px solid #66a6ff;
+  border-radius: 14px;
+  padding: 15px;
+  background: #f0f8ff;
+}
+
+/* Buttons */
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  background: #ff6f61;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 111, 97, 0.5);
+}
+
+button:hover {
+  background: #e65b4d;
+  box-shadow: 0 6px 14px rgba(230, 91, 77, 0.7);
+}
+
+/* Chat messages */
+.chat-log {
+  margin-top: 15px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user, .ai {
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin: 6px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.user {
+  background: #cce5ff;
+  color: #004085;
+  align-self: flex-end;
+}
+
+.ai {
+  background: #d4edda;
+  color: #155724;
+  align-self: flex-start;
+}
+
+/* Responsive tweaks */
+@media screen and (min-width: 600px) {
+  .app {
+    padding: 30px;
+    margin: 40px auto;
+  }
+
+  button {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
