@@ -5,12 +5,14 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
-        "installCommand": "npm ci && npm install vite --save-dev"
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
